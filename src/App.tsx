@@ -2,19 +2,22 @@ import GameOverModal from '@/components/widgets/game-over-modal';
 import { useAppContext } from '@/context/app-context';
 import { Mode } from '@/types';
 import { useState } from 'react';
+import ShipDndProvider from './components/providers/ship-dnd-provider';
+import { useProtectWindowReload } from './hooks';
 import GameView from './views/game-view';
 import MenuView from './views/menu-view';
 import SetupView from './views/setup-view';
-import ShipDndProvider from './components/providers/ship-dnd-provider';
 
 function App() {
   const [mode, setMode] = useState<Mode>(Mode.null);
-  const { generateRandomComputerField,resetGame } = useAppContext();
+  const { generateRandomComputerField, resetGame } = useAppContext();
 
   const handleEndGame = () => {
-    resetGame()
-    setMode(Mode.null)
+    resetGame();
+    setMode(Mode.null);
   };
+
+  useProtectWindowReload();
 
   return (
     <main className="flex justify-center flex-col items-center w-full max-w-7xl mx-auto min-h-screen">

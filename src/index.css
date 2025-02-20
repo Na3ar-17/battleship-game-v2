@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
   font-family: Poppins, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -13,4 +13,5 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   overflow: hidden;
+  @apply text-blue;
 }

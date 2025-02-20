@@ -1,0 +1,1 @@
+export { useProtectWindowReload } from './useProtectWindowReload';

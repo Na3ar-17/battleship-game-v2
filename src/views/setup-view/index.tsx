@@ -1,11 +1,11 @@
 import Button from '@/components/ui/button';
-import { useAppContext } from '@/context/app-context';
-import { getIsFieldConfigured } from '@/views/setup-view/helpers';
-import { FC, useMemo } from 'react';
-import SetupSection from '@/components/widgets/setup-section/setup-section';
 import Field from '@/components/widgets/field';
 import { useDragShip } from '@/components/widgets/field/hooks/use-drag-ship';
 import { useOrientation } from '@/components/widgets/setup-section/hooks/use-orientation';
+import SetupSection from '@/components/widgets/setup-section/setup-section';
+import { useAppContext } from '@/context/app-context';
+import { getIsFieldConfigured } from '@/views/setup-view/helpers';
+import { FC, useMemo } from 'react';
 
 interface SetupViewProps {
   onStartGame: () => void;
