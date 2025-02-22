@@ -1,12 +1,12 @@
+import { Button } from '@/components/ui/button';
 import Counter from '@/components/ui/counter';
-import { FC, useMemo } from 'react';
-import Ship from '../ship';
 import { useAppContext } from '@/context/app-context';
-import Button from '@/components/ui/button';
-import { getShipCount } from '@/views/setup-view/helpers';
 import { cn } from '@/lib/cn';
 import { Orientation } from '@/types';
+import { getShipCount } from '@/views/setup-view/helpers';
 import { DragOverlay, useDndContext } from '@dnd-kit/core';
+import { FC, useMemo } from 'react';
+import Ship from '../ship';
 
 interface SetupSectionProps {
   orientation: Orientation;

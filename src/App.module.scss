@@ -1,0 +1,6 @@
+.container {
+  @apply w-screen fixed h-screen;
+  background-image: radial-gradient(#ffffff2c 1px, transparent 0);
+  background-size: 20px 20px;
+  z-index: -1;
+}

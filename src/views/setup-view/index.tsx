@@ -1,4 +1,4 @@
-import Button from '@/components/ui/button';
+import { Button } from '@/components/ui/button';
 import Field from '@/components/widgets/field';
 import { useDragShip } from '@/components/widgets/field/hooks/use-drag-ship';
 import { useOrientation } from '@/components/widgets/setup-section/hooks/use-orientation';

@@ -2,8 +2,8 @@ import GameOverModal from '@/components/widgets/game-over-modal';
 import { useAppContext } from '@/context/app-context';
 import { Mode } from '@/types';
 import { useState } from 'react';
+import styles from './App.module.scss';
 import ShipDndProvider from './components/providers/ship-dnd-provider';
-import { useProtectWindowReload } from './hooks';
 import GameView from './views/game-view';
 import MenuView from './views/menu-view';
 import SetupView from './views/setup-view';
@@ -17,16 +17,11 @@ function App() {
     setMode(Mode.null);
   };
 
-  useProtectWindowReload();
-
   return (
     <main className="flex justify-center flex-col items-center w-full max-w-7xl mx-auto min-h-screen">
+      <div className={styles.container}></div>
       {mode === Mode.null && (
-        <MenuView
-          onStartSetup={() => {
-            setMode(Mode.setting);
-          }}
-        />
+        <MenuView onStartSetup={() => setMode(Mode.setting)} />
       )}
 
       {mode === Mode.setting && (

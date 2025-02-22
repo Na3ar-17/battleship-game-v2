@@ -1,4 +1,4 @@
-import Button from '@/components/ui/button';
+import { Button } from '@/components/ui/button';
 import Field from '@/components/widgets/field';
 import { useAppContext } from '@/context/app-context/use-app-context';
 import { FC } from 'react';

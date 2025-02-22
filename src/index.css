@@ -1,17 +1,35 @@
 @import 'tailwindcss';
+@plugin 'tailwindcss-animate';
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --color-primary: #2b2134;
+  --color-primary-700: #231a29;
+  --color-primary-800: #1a131e;
+  --color-primary-900: #120d18;
+  --color-primary-950: #120d18;
+}
+
+@font-face {
+  font-family: 'BruceForever';
+  src: url('/bruce-forever-font/BruceForeverRegular-X3jd2.ttf')
+    format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 :root {
-  font-family: Poppins, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family:
+    'BruceForever', Poppins, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 
 body {
   min-height: 100vh;
   width: 100%;
   margin: 0;
-  background-color: lightblue;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   overflow: hidden;
-  @apply text-blue;
+  background-color: var(--color-primary-700);
 }
